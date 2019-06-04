@@ -47,6 +47,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* https://github.com/axios
+* https://facebook.github.io/react-native/
 
 
