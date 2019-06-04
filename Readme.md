@@ -41,10 +41,6 @@ react-native run-ios
 
 * **Shihabudheen US** - [ShihabUS](https://github.com/shihabus)
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
 ## Acknowledgments
 
 * https://facebook.github.io/react-native/
