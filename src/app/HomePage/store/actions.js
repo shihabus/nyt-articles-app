@@ -1,4 +1,10 @@
-import { FETCH_STARTED, FETCH_FAILED, FETCH_SUCCESS } from './actionTypes';
+import axios from 'axios'
+import {
+    FETCH_STARTED,
+    FETCH_FAILED,
+    FETCH_SUCCESS
+} from '../../../config/actionTypes';
+
 const URL = 'https://newsapi.org/v2/top-headlines?country=de&category=business&apiKey=9b64bcfe576047ba8e5bb7fd24c9e526'
 
 export const fetchNews = () => {
@@ -6,10 +12,8 @@ export const fetchNews = () => {
         dispatch({
             type: FETCH_STARTED,
         })
-        fetch(URL, {
-            method: 'GET',
-        })
-            .then(res => res.json())
+        axios.get(URL)
+            .then(res => res.data)
             .then(result => {
                 if (result.status !== 'ok') {
                     return dispatch({
@@ -22,6 +26,7 @@ export const fetchNews = () => {
                 })
             })
             .catch(() => {
+                console.log('Error');
                 dispatch({
                     type: FETCH_FAILED
                 })
@@ -30,6 +35,3 @@ export const fetchNews = () => {
 
     }
 }
-
-
-
