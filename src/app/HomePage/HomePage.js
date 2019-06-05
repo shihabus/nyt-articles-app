@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { View, StyleSheet, Text,StatusBar } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { connect } from 'react-redux'
-import { fetchNews } from './store/actions'
-import { NewsCard, Error, Loader } from '../../components'
+import { fetchNews, selectedArticle } from './store'
+import { NewsCard, Error, Loader, CustomStatusBar } from '../../components'
 
 class HomePage extends Component {
     constructor(props) {
@@ -15,11 +15,11 @@ class HomePage extends Component {
     static navigationOptions = {
         title: 'Home',
         headerRight: (
-            <View style={{padding:15}}>
+            <View style={{ padding: 15 }}>
                 <Icon name="search" size={15} color="#6a6a6a" />
             </View>
-              
-          ),
+
+        ),
         headerStyle: {
             backgroundColor: '#000',
         },
@@ -35,6 +35,13 @@ class HomePage extends Component {
         fetchNews()
     }
 
+    selectionHandler = (item) => {
+        const { selectedArticle, navigation } = this.props;
+        selectedArticle(item)
+        navigation.navigate('Details', { title: item.title })
+    }
+
+
     renderSuspense = () => {
         const { error, loading, articleArray } = this.props;
         if (error) {
@@ -43,17 +50,14 @@ class HomePage extends Component {
         else if (loading) {
             return <Loader />
         }
-        return <NewsCard article={articleArray} style={{ flex: 1 }} />
+        return <NewsCard article={articleArray} style={{ flex: 1 }} handleSelection={this.selectionHandler} />
     }
 
 
     render() {
         return (
             <View style={styles.container}>
-                <StatusBar
-                    backgroundColor='#000'
-                    barStyle="light-content"
-                />
+                <CustomStatusBar />
                 {this.renderSuspense()}
             </View>
         )
@@ -62,13 +66,12 @@ class HomePage extends Component {
 }
 
 const mapStateToProps = ({ articles }) => {
-    console.log('ppp', articles);
     const { loading, articleArray, error, success } = articles
     return { loading, articleArray, error, success }
 }
 
 
-export default connect(mapStateToProps, { fetchNews })(HomePage)
+export default connect(mapStateToProps, { fetchNews, selectedArticle })(HomePage)
 
 const styles = StyleSheet.create({
     container: {

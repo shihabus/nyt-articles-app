@@ -5,11 +5,13 @@ const homePageInitialState = {
     loading: false,
     error: false,
     success: false,
+    selectedArticle:{}
 }
 
-export default homePage = (state = homePageInitialState, action) => {
+export const homePageReducer = (state = homePageInitialState, action) => {
     switch (action.type) {
         case FETCH_STARTED:
+            console.log('cool');
             return { ...state, success: false, error: false, loading: true }
         case FETCH_SUCCESS:
             return { ...state, articleArray: action.payload, success: true, error: false, loading: false }

@@ -1,36 +1,42 @@
 import React from 'react';
-import { View, Text, FlatList, StyleSheet, Image, TouchableOpacity, TouchableNativeFeedback, TouchableHighlight } from 'react-native';
+import { View, Text, FlatList, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
-export const NewsCard = ({ article }) => {
+export const NewsCard = ({ article, handleSelection }) => {
 
-    renderSeparator = () => {
+    renderSeparator = () => (<View style={styles.itemLineSeparator} />)
+
+    renderHeader = () => (
+        <View>
+            <Text style={styles.headerText}>Your Daily Read</Text>
+            <View style={styles.headerLineSeparator} />
+        </View>
+    )
+
+    renderItem=news=>{
+        const { item } = news
         return (
-            <View
-                style={{
-                    height: 0.5,
-                    width: "100%",
-                    backgroundColor: "#CED0CE",
-                    marginLeft: 10
-                }}
-            />
-        );
-    };
-
-    renderHeader = () => {
-        return (
-            <View>
-                <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#000', padding: 10 }}>Your Daily Read</Text>
-                <View
-                    style={{
-                        height: 1,
-                        width: "100%",
-                        backgroundColor: "#CED0CE",
-                        marginLeft: 10
-                    }}
-                />
-            </View>
+            <TouchableOpacity
+                key={Number(news.index)}
+                style={styles.cardContainer}
+                onPress={() => handleSelection(item)}>
+                <View style={styles.textContainer}>
+                    <Text 
+                    numberOfLines={2} 
+                    ellipsizeMode='tail' 
+                    style={styles.titleText}>{item.title}</Text>
+                    <Text style={styles.authorText}>{item.author}</Text>
+                </View>
+                <View style={styles.imageContainer}>
+                    <Image
+                        style={styles.imageStyle}
+                        resizeMode='cover'
+                        source={{ uri: `${item.urlToImage}` }}
+                    />
+                </View>
+            </TouchableOpacity>
         )
     }
+
     return (
         <View>
             <FlatList
@@ -40,35 +46,18 @@ export const NewsCard = ({ article }) => {
                 ItemSeparatorComponent={renderSeparator}
                 keyExtractor={news => news.index}
                 ListHeaderComponent={renderHeader}
-                ListHeaderComponentStyle={{ fontSize: 18, fontWeight: 'bold', }}
-                renderItem={(news) => {
-                    const { item } = news
-                    return (
-                        <TouchableOpacity
-                            key={Number(news.index)}
-                            style={styles.cardContainer}
-                            onPress={()=>console.log('sss',item)}
-                        >
-                            <View style={styles.textContainer}>
-                                <Text numberOfLines={2} ellipsizeMode='tail' style={{ color: '#000', fontSize: 15, fontWeight: 'bold' }}>{item.title}</Text>
-                                <Text style={{ fontSize: 12 }}>{item.author}</Text>
-                            </View>
-                            <View style={styles.imageContainer}>
-                                <Image
-                                    style={styles.imageStyle}
-                                    resizeMode='cover'
-                                    source={{ uri: `${item.urlToImage}` }}
-                                />
-                            </View>
-                        </TouchableOpacity>
-                    )
-                }} />
+                ListHeaderComponentStyle={styles.listHeaderText}
+                renderItem={news => this.renderItem(news)} />
         </View>
     )
 }
 
+
+
 const styles = StyleSheet.create({
-    listConatiner: {
+    listHeaderText: { 
+        fontSize: 18, 
+        fontWeight: 'bold', 
     },
     cardContainer: {
         flexDirection: 'row',
@@ -81,8 +70,13 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         width: '60%'
     },
-    titleText: {
-        color: '#000',
+    titleText: { 
+        color: '#000', 
+        fontSize: 15, 
+        fontWeight: 'bold' 
+    },
+    authorText:{ 
+        fontSize: 12 
     },
     imageContainer: {
         justifyContent: 'center',
@@ -92,6 +86,24 @@ const styles = StyleSheet.create({
         height: 80,
         width: 80,
         alignSelf: 'flex-end',
-    }
+    },
+    headerText: {
+        fontSize: 22,
+        fontWeight: 'bold',
+        color: '#000',
+        padding: 10
+    },
+    headerLineSeparator: {
+        height: 1,
+        width: "100%",
+        backgroundColor: "#CED0CE",
+        marginLeft: 10
+    },
+    itemLineSeparator: {
+        height: 0.5,
+        width: "100%",
+        backgroundColor: "#CED0CE",
+        marginLeft: 10
+    },
 })
 

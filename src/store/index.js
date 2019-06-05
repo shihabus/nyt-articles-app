@@ -1,7 +1,9 @@
 import { combineReducers} from "redux";
-import homePage from '../app/HomePage/store/reducer';
+import {homePageReducer} from '../app/HomePage/store';
+import {detailsPageReducer} from '../app/DetailsPage/store';
 
 export default combineReducers({
-    articles:homePage
+    articles:homePageReducer,
+    selection:detailsPageReducer
 })
 

@@ -1,10 +1,24 @@
 import React from 'react';
-import {View,Text} from 'react-native';
+import { View, Image, StyleSheet } from 'react-native';
 
-export const ImageSection=()=> {
+export const ImageSection = ({ url }) => {
     return (
-        <View>
-            <Text>Details Image section</Text>
+        <View style={styles.container}>
+            <Image
+                style={styles.image}
+                resizeMode='cover'
+                source={{ uri: `${url}` }}
+            />
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+        marginVertical: 5
+    },
+    image: {
+        height: 200,
+        width: undefined
+    }
+})

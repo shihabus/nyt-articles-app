@@ -2,7 +2,8 @@ import axios from 'axios'
 import {
     FETCH_STARTED,
     FETCH_FAILED,
-    FETCH_SUCCESS
+    FETCH_SUCCESS,
+    SELECTED_ARTICLE
 } from '../../../config/actionTypes';
 
 const URL = 'https://newsapi.org/v2/top-headlines?country=de&category=business&apiKey=9b64bcfe576047ba8e5bb7fd24c9e526'
@@ -35,3 +36,8 @@ export const fetchNews = () => {
 
     }
 }
+
+export const selectedArticle = selectedItem => ({
+    type: SELECTED_ARTICLE,
+    payload: selectedItem
+})
