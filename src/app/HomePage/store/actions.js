@@ -27,7 +27,6 @@ export const fetchNews = () => {
                 })
             })
             .catch(() => {
-                console.log('Error');
                 dispatch({
                     type: FETCH_FAILED
                 })

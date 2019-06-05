@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { View, ScrollView } from 'react-native';
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types';
 import { ImageSection, TitleSection,TextSection,CustomStatusBar } from '../../components'
-
 
 class DetailsPage extends Component {
    
@@ -35,6 +35,11 @@ class DetailsPage extends Component {
             </ScrollView>
         )
     }
+}
+
+DetailsPage.propTypes = {
+    selectedArticle: PropTypes.object ,
+    navigation: PropTypes.object ,
 }
 
 const mapStateToProps = ({ selection }) => {

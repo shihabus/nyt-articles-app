@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { View, StyleSheet } from 'react-native';
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 import { fetchNews, selectedArticle } from './store'
 import { NewsCard, Error, Loader, CustomStatusBar } from '../../components'
 
@@ -63,6 +64,15 @@ class HomePage extends Component {
         )
     }
 
+}
+
+HomePage.propTypes ={
+    fetchNews:PropTypes.func,
+    navigation:PropTypes.object,
+    articleArray:PropTypes.array,
+    error:PropTypes.bool, 
+    loading:PropTypes.bool,
+    success:PropTypes.bool,
 }
 
 const mapStateToProps = ({ articles }) => {

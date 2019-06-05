@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text,StyleSheet } from 'react-native';
+import PropTypes from 'prop-types';
 
 export const TextSection = ({ content }) => {
     return (
@@ -7,6 +8,10 @@ export const TextSection = ({ content }) => {
             <Text style={styles.content}>{content}</Text>
         </View>
     )
+}
+
+TextSection.propTypes={
+    content:PropTypes.string, 
 }
 
 const styles=StyleSheet.create({

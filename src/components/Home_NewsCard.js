@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, FlatList, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import PropTypes from 'prop-types';
 
 export const NewsCard = ({ article, handleSelection }) => {
 
@@ -12,24 +13,24 @@ export const NewsCard = ({ article, handleSelection }) => {
         </View>
     )
 
-    renderItem=news=>{
+    renderItem = news => {
         const { item } = news
         return (
             <TouchableOpacity
-                key={Number(news.index)}
+                key={news.index.toString()}
                 style={styles.cardContainer}
                 onPress={() => handleSelection(item)}>
                 <View style={styles.textContainer}>
-                    <Text 
-                    numberOfLines={2} 
-                    ellipsizeMode='tail' 
-                    style={styles.titleText}>{item.title}</Text>
+                    <Text
+                        numberOfLines={2}
+                        ellipsizeMode='tail'
+                        style={styles.titleText}>{item.title}</Text>
                     <Text style={styles.authorText}>{item.author}</Text>
                 </View>
                 <View style={styles.imageContainer}>
                     <Image
                         style={styles.imageStyle}
-                        resizeMode='cover'
+                        resizeMode='contain'
                         source={{ uri: `${item.urlToImage}` }}
                     />
                 </View>
@@ -44,7 +45,7 @@ export const NewsCard = ({ article, handleSelection }) => {
                 style={styles.listConatiner}
                 contentContainerStyle={{ paddingBottom: 5 }}
                 ItemSeparatorComponent={renderSeparator}
-                keyExtractor={news => news.index}
+                keyExtractor={news => (news.index)}
                 ListHeaderComponent={renderHeader}
                 ListHeaderComponentStyle={styles.listHeaderText}
                 renderItem={news => this.renderItem(news)} />
@@ -52,12 +53,16 @@ export const NewsCard = ({ article, handleSelection }) => {
     )
 }
 
+NewsCard.propTypes = {
+    article: PropTypes.array,
+    handleSelection: PropTypes.func
+}
 
 
 const styles = StyleSheet.create({
-    listHeaderText: { 
-        fontSize: 18, 
-        fontWeight: 'bold', 
+    listHeaderText: {
+        fontSize: 18,
+        fontWeight: 'bold',
     },
     cardContainer: {
         flexDirection: 'row',
@@ -70,21 +75,21 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         width: '60%'
     },
-    titleText: { 
-        color: '#000', 
-        fontSize: 15, 
-        fontWeight: 'bold' 
+    titleText: {
+        color: '#000',
+        fontSize: 15,
+        fontWeight: 'bold'
     },
-    authorText:{ 
-        fontSize: 12 
+    authorText: {
+        fontSize: 12
     },
     imageContainer: {
         justifyContent: 'center',
         width: '40%'
     },
     imageStyle: {
-        height: 80,
-        width: 80,
+        height: '80%',
+        width: '80%',
         alignSelf: 'flex-end',
     },
     headerText: {

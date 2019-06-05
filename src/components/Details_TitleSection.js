@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import PropTypes from 'prop-types';
 
 export const TitleSection = ({ title, author, date }) => {
     return (
@@ -11,6 +12,12 @@ export const TitleSection = ({ title, author, date }) => {
             </View>
         </View>
     )
+}
+
+TitleSection.propTypes={
+    title:PropTypes.string, 
+    author:PropTypes.string, 
+    date:PropTypes.string
 }
 
 const styles = StyleSheet.create({

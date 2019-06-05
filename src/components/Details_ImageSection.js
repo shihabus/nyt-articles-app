@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Image, StyleSheet } from 'react-native';
+import PropTypes from 'prop-types';
 
 export const ImageSection = ({ url }) => {
     return (
@@ -13,9 +14,13 @@ export const ImageSection = ({ url }) => {
     )
 }
 
+ImageSection.propTypes={
+    url:PropTypes.string, 
+}
+
 const styles = StyleSheet.create({
     container: {
-        marginVertical: 5
+        marginVertical: 5,
     },
     image: {
         height: 200,
