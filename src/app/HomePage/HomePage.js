@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Icon from 'react-native-vector-icons/FontAwesome';
 import { View, StyleSheet, Text,StatusBar } from 'react-native';
 import { connect } from 'react-redux'
 import { fetchNews } from './store/actions'
@@ -14,8 +15,8 @@ class HomePage extends Component {
     static navigationOptions = {
         title: 'Home',
         headerRight: (
-            <View>
-                <Text style={{color:'#fff'}}>H</Text>
+            <View style={{padding:15}}>
+                <Icon name="search" size={15} color="#6a6a6a" />
             </View>
               
           ),

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, FlatList, StyleSheet, Image } from 'react-native';
+import { View, Text, FlatList, StyleSheet, Image, TouchableOpacity, TouchableNativeFeedback, TouchableHighlight } from 'react-native';
 
 export const NewsCard = ({ article }) => {
 
@@ -19,7 +19,7 @@ export const NewsCard = ({ article }) => {
     renderHeader = () => {
         return (
             <View>
-                <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#000', padding: 10 }}>Daily Feed</Text>
+                <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#000', padding: 10 }}>Your Daily Read</Text>
                 <View
                     style={{
                         height: 1,
@@ -44,7 +44,11 @@ export const NewsCard = ({ article }) => {
                 renderItem={(news) => {
                     const { item } = news
                     return (
-                        <View key={Number(news.index)} style={styles.cardContainer}>
+                        <TouchableOpacity
+                            key={Number(news.index)}
+                            style={styles.cardContainer}
+                            onPress={()=>console.log('sss',item)}
+                        >
                             <View style={styles.textContainer}>
                                 <Text numberOfLines={2} ellipsizeMode='tail' style={{ color: '#000', fontSize: 15, fontWeight: 'bold' }}>{item.title}</Text>
                                 <Text style={{ fontSize: 12 }}>{item.author}</Text>
@@ -56,7 +60,7 @@ export const NewsCard = ({ article }) => {
                                     source={{ uri: `${item.urlToImage}` }}
                                 />
                             </View>
-                        </View>
+                        </TouchableOpacity>
                     )
                 }} />
         </View>
