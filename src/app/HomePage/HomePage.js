@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { fetchNews, selectedArticle } from './store'
 import { NewsCard, Error, Loader, CustomStatusBar } from '../../components'
+import SearchBar from '../../components/SearchBar'
 
 class HomePage extends Component {
     constructor(props) {
@@ -15,12 +16,6 @@ class HomePage extends Component {
     }
     static navigationOptions = {
         title: 'Home',
-        headerRight: (
-            <View style={{ padding: 15 }}>
-                <Icon name="search" size={15} color="#6a6a6a" />
-            </View>
-
-        ),
         headerStyle: {
             backgroundColor: '#000',
         },
@@ -51,7 +46,12 @@ class HomePage extends Component {
         else if (loading) {
             return <Loader />
         }
-        return <NewsCard article={articleArray} style={{ flex: 1 }} handleSelection={this.selectionHandler} />
+        return (
+            <View style={{ flex: 1 }} >
+                <SearchBar style={{ height: '10%' }} />
+                <NewsCard article={articleArray} style={{ height: '90%' }} handleSelection={this.selectionHandler} />
+            </View>
+        )
     }
 
 
@@ -66,13 +66,13 @@ class HomePage extends Component {
 
 }
 
-HomePage.propTypes ={
-    fetchNews:PropTypes.func,
-    navigation:PropTypes.object,
-    articleArray:PropTypes.array,
-    error:PropTypes.bool, 
-    loading:PropTypes.bool,
-    success:PropTypes.bool,
+HomePage.propTypes = {
+    fetchNews: PropTypes.func,
+    navigation: PropTypes.object,
+    articleArray: PropTypes.array,
+    error: PropTypes.bool,
+    loading: PropTypes.bool,
+    success: PropTypes.bool,
 }
 
 const mapStateToProps = ({ articles }) => {
