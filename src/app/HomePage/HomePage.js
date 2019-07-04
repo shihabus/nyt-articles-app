@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet,SafeAreaView } from 'react-native';
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { fetchNews, selectedArticle } from './store'
-import { NewsCard, Error, Loader, CustomStatusBar } from '../../components'
-import SearchBar from '../../components/SearchBar'
+import { NewsCard, Error, Loader } from '../../components'
+import {COLORS,STRINGS} from '../../constants'
 
 class HomePage extends Component {
     constructor(props) {
@@ -15,11 +15,21 @@ class HomePage extends Component {
         }
     }
     static navigationOptions = {
-        title: 'Home',
+        title: STRINGS.homePageTitle,
+        headerRight:(
+            <View style={{paddingHorizontal:20}}>
+                <Icon name="search" size={20} color={COLORS.headerTextColor} />
+            </View>
+        ),
+        headerLeft:(
+            <View style={{paddingHorizontal:20}}>
+                <Icon name="bars" size={20} color={COLORS.headerTextColor} />
+            </View>
+        ),
         headerStyle: {
-            backgroundColor: '#000',
+            backgroundColor: COLORS.headerBar,
         },
-        headerTintColor: '#CED0CE',
+        headerTintColor: COLORS.headerTextColor,
         headerTitleStyle: {
             fontWeight: 'normal',
             fontSize: 18
@@ -34,7 +44,7 @@ class HomePage extends Component {
     selectionHandler = (item) => {
         const { selectedArticle, navigation } = this.props;
         selectedArticle(item)
-        navigation.navigate('Details', { title: item.title })
+        navigation.navigate('Details')
     }
 
 
@@ -48,8 +58,7 @@ class HomePage extends Component {
         }
         return (
             <View style={{ flex: 1 }} >
-                <SearchBar style={{ height: '10%' }} />
-                <NewsCard article={articleArray} style={{ height: '90%' }} handleSelection={this.selectionHandler} />
+                <NewsCard article={articleArray} handleSelection={this.selectionHandler} />
             </View>
         )
     }
@@ -57,10 +66,9 @@ class HomePage extends Component {
 
     render() {
         return (
-            <View style={styles.container}>
-                <CustomStatusBar />
+            <SafeAreaView style={styles.container}>
                 {this.renderSuspense()}
-            </View>
+            </SafeAreaView>
         )
     }
 

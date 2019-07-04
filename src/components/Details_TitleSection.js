@@ -22,18 +22,20 @@ TitleSection.propTypes={
 
 const styles = StyleSheet.create({
     container: {
-        marginVertical: 5,
-        paddingHorizontal: 10
+        paddingVertical: 5,
+        borderBottomColor:'#fff',
+        borderBottomWidth:0.3
     },
     title: {
         fontSize: 25,
         color: '#000',
         fontWeight: 'bold',
         lineHeight: 30,
+        textAlign:'justify'
     },
     rowContainer: {
         flexDirection: 'row',
-        justifyContent: 'flex-start',
+        justifyContent: 'space-between',
         paddingVertical: 10
     },
     author: {

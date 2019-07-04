@@ -1,4 +1,4 @@
-import { SELECTED_ARTICLE } from '../../../config/actionTypes'
+import { SELECTED_ARTICLE } from '../../../config'
 const initialState = {}
 
 export const detailsPageReducer=(state = initialState, action) => {

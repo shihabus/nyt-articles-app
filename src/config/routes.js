@@ -5,8 +5,8 @@ import DetailsPage from '../app/DetailsPage/DetailsPage';
 const AppNavigator = createStackNavigator(
   {
     Home: HomePage,
-    Details: DetailsPage
+    Details: DetailsPage,
   },
 );
 
-export default createAppContainer(AppNavigator);
+export const Router= createAppContainer(AppNavigator);

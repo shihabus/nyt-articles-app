@@ -15,6 +15,11 @@ TextSection.propTypes={
 }
 
 const styles=StyleSheet.create({
-    container:{ paddingHorizontal: 10 },
-    content:{ fontSize: 16,lineHeight: 20,color:'#464646' }
+    container:{ paddingVertical: 10 },
+    content:{ 
+        fontSize: 16,
+        lineHeight: 20,
+        color:'#464646',
+        textAlign:'justify' 
+    }
 })

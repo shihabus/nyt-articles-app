@@ -1,4 +1,4 @@
-import { FETCH_FAILED, FETCH_STARTED, FETCH_SUCCESS } from '../../../config/actionTypes';
+import { FETCH_FAILED, FETCH_STARTED, FETCH_SUCCESS } from '../../../config';
 
 const homePageInitialState = {
     articleArray: [],
