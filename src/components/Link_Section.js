@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet,Linking } from "react-native";
 import PropTypes from "prop-types";
 
 export const LinkSection = ({ source,url }) => {
