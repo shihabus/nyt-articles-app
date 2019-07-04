@@ -1,13 +1,13 @@
-import { SELECTED_ARTICLE } from '../../../config'
-const initialState = {}
+import { SELECTED_ARTICLE } from '../../../config';
 
-export const detailsPageReducer=(state = initialState, action) => {
-    switch (action.type) {
+const initialState = {};
 
-        case SELECTED_ARTICLE:
-            return { ...state, selectedArticle: action.payload };
+export const detailsPageReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case SELECTED_ARTICLE:
+      return { ...state, selectedArticle: action.payload };
 
-        default:
-            return state
-    }
+    default:
+      return state;
+  }
 };

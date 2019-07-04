@@ -14,6 +14,7 @@ class HomePage extends Component {
             articleArray: []
         }
     }
+    
     static navigationOptions = {
         title: STRINGS.homePageTitle,
         headerRight:(
@@ -87,7 +88,6 @@ const mapStateToProps = ({ articles }) => {
     const { loading, articleArray, error, success } = articles
     return { loading, articleArray, error, success }
 }
-
 
 export default connect(mapStateToProps, { fetchNews, selectedArticle })(HomePage)
 

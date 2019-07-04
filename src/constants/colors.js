@@ -1,4 +1,4 @@
-export const COLORS={
-    headerBar:'#03A6A6',
-    headerTextColor:'#fff'
-}
+export const COLORS = {
+  headerBar: '#03A6A6',
+  headerTextColor: '#fff',
+};

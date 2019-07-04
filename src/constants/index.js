@@ -1,3 +1,3 @@
-export * from './urls'
-export * from './colors'
-export * from './strings'
+export * from './urls';
+export * from './colors';
+export * from './strings';
