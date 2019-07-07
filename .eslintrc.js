@@ -3,7 +3,8 @@ module.exports = {
     browser: true,
     es6: true,
   },
-  extends: ['airbnb',"prettier", "prettier/react"],
+  parser: "babel-eslint",
+  extends: ["airbnb", "prettier", "prettier/react"],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -11,16 +12,15 @@ module.exports = {
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
+      impliedStrict: true,
+      classes: true
     },
     ecmaVersion: 2018,
     sourceType: 'module',
   },
   plugins: [
-    'react',
+    'react',"prettier"
   ],
   rules: {
-    "import/prefer-default-export":0,
-    "import/no-named-as-default-member":0,
-    "import/no-named-as-default":0
   },
 };
