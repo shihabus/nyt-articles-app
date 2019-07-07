@@ -17,11 +17,20 @@ const styles = StyleSheet.create({
 });
 
 const Card = ({ item,handleSelection }) => {
-  const { byline, source, published_date, title, media, id } = item;
-  const params = { byline, source, published_date, title };
+
+  const { byline, source, published_date, title, media, id,abstract,url } = item;
+  
+  
   const urlToImage = media[0]["media-metadata"]
-    .filter(x => x.format === "Large Thumbnail")[0]
-    .url.toString();
+  .filter(x => x.format === "Large Thumbnail")[0]
+  .url.toString();
+
+  const urlToLargeImage = media[0]["media-metadata"]
+  .filter(x => x.format === "mediumThreeByTwo440")[0]
+  .url.toString();
+
+  const params = { byline, source, published_date, title,abstract,url,imageURL:urlToLargeImage};
+  
 
   const handler=(selection)=>{
     handleSelection(selection)
@@ -47,7 +56,9 @@ Card.propTypes = {
     published_date: PropTypes.string,
     title: PropTypes.string,
     media: PropTypes.arrayOf(PropTypes.object),
-    id: PropTypes.number
+    id: PropTypes.number,
+    abstract:PropTypes.string,
+    url: PropTypes.string
   }),
   handleSelection:PropTypes.func
 

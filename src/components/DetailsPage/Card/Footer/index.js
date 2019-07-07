@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
   container: { flexDirection: "row", justifyContent: "space-around" },
   link: { color: "blue" }
 });
-export const Footer = ({ source, url }) => {
+const Footer = ({ source, url }) => {
   return (
     <View style={styles.container}>
       <Text>{source}</Text>
@@ -16,6 +16,8 @@ export const Footer = ({ source, url }) => {
     </View>
   );
 };
+
+export default Footer;
 
 Footer.propTypes = {
   source: PropTypes.string,

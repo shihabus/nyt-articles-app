@@ -25,5 +25,6 @@ module.exports = {
     "react/jsx-filename-extension":0,
     "import/prefer-default-export":0,
     "import/no-cycle":0,
-    "react/require-default-props":0
+    "react/require-default-props":0,
+    "no-shadow":0
 }}

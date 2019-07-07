@@ -12,13 +12,15 @@ const styles=StyleSheet.create({
     }
 })
 
-export const Content = ({ content }) => {
+const Content = ({ content }) => {
     return (
         <View style={styles.container}>
             <Text style={styles.content}>{content}</Text>
         </View>
     )
 }
+
+export default Content;
 
 Content.propTypes={
     content:PropTypes.string, 

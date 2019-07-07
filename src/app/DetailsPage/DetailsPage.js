@@ -1,16 +1,14 @@
+/* eslint-disable camelcase */
 import React, { Component } from "react";
 import { View } from "react-native";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
-import {
-  ImageSection,
-  DetailsCard
-} from "../../components/DetailsPage";
-import {COLORS,STRINGS} from '../../constants'
+import { ImageSection, DetailsCard } from "../../components/DetailsPage";
+import { COLORS, STRINGS } from "../../constants";
 
 class DetailsPage extends Component {
-  static navigationOptions = ({ navigation }) => {
+  static navigationOptions = () => {
     return {
       title: STRINGS.detailsPageTitle,
       headerStyle: {
@@ -33,12 +31,12 @@ class DetailsPage extends Component {
         source,
         title,
         url,
-        media
+        imageURL
       }
     } = this.props;
-    const urlToImage = media[0]["media-metadata"]
-      .filter(item => item.format === "mediumThreeByTwo440")[0]
-      .url.toString();
+
+    const urlToImage = imageURL;
+
     const params = {
       title,
       date: published_date,
@@ -57,8 +55,15 @@ class DetailsPage extends Component {
 }
 
 DetailsPage.propTypes = {
-  selectedArticle: PropTypes.object,
-  navigation: PropTypes.object
+  selectedArticle: PropTypes.shape({
+    abstract: PropTypes.string,
+    byline: PropTypes.string,
+    published_date: PropTypes.string,
+    source: PropTypes.string,
+    title: PropTypes.string,
+    url: PropTypes.string,
+    imageURL: PropTypes.string
+  })
 };
 
 const mapStateToProps = ({ selection }) => {

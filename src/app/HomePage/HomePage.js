@@ -4,17 +4,17 @@ import { View, StyleSheet, SafeAreaView } from "react-native";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { fetchNews, selectedArticle } from "./store";
-import { NewsCard, Error, Loader } from "../../components";
+import { Error, Loader } from "../../components/Common";
 import { List } from "../../components/HomePage";
 import { COLORS, STRINGS } from "../../constants";
 
-class HomePage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      articleArray: []
-    };
+const styles = StyleSheet.create({
+  container: {
+    flex: 1
   }
+});
+
+class HomePage extends Component {
 
   static navigationOptions = {
     title: STRINGS.homePageTitle,
@@ -44,7 +44,6 @@ class HomePage extends Component {
   }
 
   selectionHandler = item => {
-    console.log('Trigger',item)
     const { selectedArticle, navigation } = this.props;
     selectedArticle(item);
     navigation.navigate("Details");
@@ -79,11 +78,12 @@ class HomePage extends Component {
 
 HomePage.propTypes = {
   fetchNews: PropTypes.func,
+  // eslint-disable-next-line react/forbid-prop-types
   navigation: PropTypes.object,
-  articleArray: PropTypes.array,
+  articleArray: PropTypes.arrayOf(PropTypes.object),
   error: PropTypes.bool,
   loading: PropTypes.bool,
-  success: PropTypes.bool
+  selectedArticle: PropTypes.func
 };
 
 const mapStateToProps = ({ articles }) => {
@@ -96,8 +96,4 @@ export default connect(
   { fetchNews, selectedArticle }
 )(HomePage);
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  }
-});
+

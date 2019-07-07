@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     },
 })
 
-export const TitleSection = ({ title, author, date }) => {
+const  TitleSection=({ title, author, date }) => {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>{title}</Text>
@@ -36,6 +36,8 @@ export const TitleSection = ({ title, author, date }) => {
         </View>
     )
 }
+
+export default TitleSection;
 
 TitleSection.propTypes={
     title:PropTypes.string, 
