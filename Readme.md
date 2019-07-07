@@ -41,14 +41,14 @@ This will generate test coverage report. It is availbale inside directory named 
 
 ## Built With
 
-* [Jest](https://facebook.github.io/react-native/docs/getting-started) - The framework used
-* [Enzyme](https://github.com/airbnb/enzyme) - Testing Utility
+* [React Native](https://facebook.github.io/react-native/docs/getting-started) - The framework used
+* [React Redux](https://react-redux.js.org/introduction/quick-start) - State container library
+* [React Navigation](https://reactnavigation.org/docs/en/getting-started.html) - Navigation library
 
 ## Tested With
 
 * [Jest](https://github.com/facebook/jest) - The testing framework used
-* [Enzyme](https://react-redux.js.org/introduction/quick-start) - State container library
-* [React Navigation](https://reactnavigation.org/docs/en/getting-started.html) - Navigation library
+* [Enzyme](https://github.com/airbnb/enzyme) - Testing Utility
 
 ## Authors
 
