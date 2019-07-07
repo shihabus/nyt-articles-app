@@ -2,6 +2,14 @@ import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome'
 import {View,Text,StyleSheet} from 'react-native';
 
+const styles=StyleSheet.create({
+    container:{
+        flex:1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    }
+})
+
 export const Error=()=> {
     return (
         <View style={styles.container}>
@@ -11,10 +19,3 @@ export const Error=()=> {
     )
 }
 
-const styles=StyleSheet.create({
-    container:{
-        flex:1,
-        justifyContent: 'center',
-        alignItems: 'center',
-    }
-})

@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
   container: { flexDirection: "row", justifyContent: "space-around" },
   link: { color: "blue" }
 });
-export const LinkSection = ({ source, url }) => {
+export const Footer = ({ source, url }) => {
   return (
     <View style={styles.container}>
       <Text>{source}</Text>
@@ -17,7 +17,7 @@ export const LinkSection = ({ source, url }) => {
   );
 };
 
-LinkSection.propTypes = {
+Footer.propTypes = {
   source: PropTypes.string,
   url: PropTypes.string
 };

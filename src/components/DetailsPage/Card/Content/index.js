@@ -2,18 +2,6 @@ import React from 'react';
 import { View, Text,StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 
-export const TextSection = ({ content }) => {
-    return (
-        <View style={styles.container}>
-            <Text style={styles.content}>{content}</Text>
-        </View>
-    )
-}
-
-TextSection.propTypes={
-    content:PropTypes.string, 
-}
-
 const styles=StyleSheet.create({
     container:{ paddingVertical: 10 },
     content:{ 
@@ -23,3 +11,15 @@ const styles=StyleSheet.create({
         textAlign:'justify' 
     }
 })
+
+export const Content = ({ content }) => {
+    return (
+        <View style={styles.container}>
+            <Text style={styles.content}>{content}</Text>
+        </View>
+    )
+}
+
+Content.propTypes={
+    content:PropTypes.string, 
+}

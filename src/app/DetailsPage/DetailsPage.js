@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 import {
   ImageSection,
   DetailsCard
-} from "../../components";
+} from "../../components/DetailsPage";
 import {COLORS,STRINGS} from '../../constants'
 
 class DetailsPage extends Component {
@@ -38,7 +38,7 @@ class DetailsPage extends Component {
     } = this.props;
     const urlToImage = media[0]["media-metadata"]
       .filter(item => item.format === "mediumThreeByTwo440")[0]
-      ["url"].toString();
+      .url.toString();
     const params = {
       title,
       date: published_date,
