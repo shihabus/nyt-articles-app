@@ -47,8 +47,8 @@ class DetailsPage extends Component {
     };
     return (
       <View style={{ flex: 1 }}>
-        <ImageSection url={urlToImage} />
-        <DetailsCard params={params} />
+        <ImageSection url={urlToImage} testID='ImageSection'/>
+        <DetailsCard params={params} testID='DetailsCard'/>
       </View>
     );
   }

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="/Users/shihabudheenus/Documents/shihabudheen-us-news-app/__tests__/App-test.js">
-    <testCase name="renders correctly" duration="14">
-      <failure message="Invariant Violation: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object."><![CDATA[Invariant Violation: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object.
-    at invariant (/Users/shihabudheenus/Documents/shihabudheen-us-news-app/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:55:15)
-    at createFiberFromTypeAndProps (/Users/shihabudheenus/Documents/shihabudheen-us-news-app/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:2054:11)
-    at createFiberFromElement (/Users/shihabudheenus/Documents/shihabudheen-us-news-app/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:2075:15)
-    at reconcileSingleElement (/Users/shihabudheenus/Documents/shihabudheen-us-news-app/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:4605:23)
-    at reconcileChildFibers (/Users/shihabudheenus/Documents/shihabudheen-us-news-app/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:4662:35)
-    at reconcileChildren (/Users/shihabudheenus/Documents/shihabudheen-us-news-app/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6329:28)
-    at updateHostRoot (/Users/shihabudheenus/Documents/shihabudheen-us-news-app/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6741:5)
-    at beginWork (/Users/shihabudheenus/Documents/shihabudheen-us-news-app/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:7566:14)
-    at performUnitOfWork (/Users/shihabudheenus/Documents/shihabudheen-us-news-app/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:11234:12)
-    at workLoop (/Users/shihabudheenus/Documents/shihabudheen-us-news-app/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:11266:24)]]></failure>
-    </testCase>
+  <file path="/Users/shihabudheenus/Documents/shihabudheen-us-news-app/src/app/DetailsPage/store/reducer.test.js">
+    <testCase name="Details Page Reducer should return the initial state" duration="5"/>
+    <testCase name="Details Page Reducer should handle default" duration="1"/>
+    <testCase name="Details Page Reducer should handle SELECTED_ARTICLE" duration="0"/>
+  </file>
+  <file path="/Users/shihabudheenus/Documents/shihabudheen-us-news-app/src/app/HomePage/store/reducer.test.js">
+  </file>
+  <file path="/Users/shihabudheenus/Documents/shihabudheen-us-news-app/src/app/HomePage/store/action.test.js">
+  </file>
+  <file path="/Users/shihabudheenus/Documents/shihabudheen-us-news-app/src/components/HomePage/Card.test.js">
+  </file>
+  <file path="/Users/shihabudheenus/Documents/shihabudheen-us-news-app/src/app/DetailsPage/DetailsPage.test.js">
+  </file>
+  <file path="/Users/shihabudheenus/Documents/shihabudheen-us-news-app/src/app/HomePage/HomePage.test.js">
   </file>
 </testExecutions>

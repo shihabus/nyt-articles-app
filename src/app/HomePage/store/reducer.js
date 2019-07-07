@@ -1,26 +1,20 @@
-import { FETCH_FAILED, FETCH_STARTED, FETCH_SUCCESS } from '../../../config';
+import { actionTypes } from '../../../config';
 
-const homePageInitialState = {
-  articleArray: [],
-  loading: false,
-  error: false,
-  success: false,
-  selectedArticle: {},
-};
+const homePageInitialState = [];
 
-export const homePageReducer = (state = homePageInitialState, action) => {
-  switch (action.type) {
-    case FETCH_STARTED:
+export const homePageReducer = (state = homePageInitialState, {type,payload}) => {
+  switch (type) {
+    case actionTypes.FETCH_STARTED:
       return {
-        ...state, success: false, error: false, loading: true,
+        ...state, success: false, error: false, loading: true,articleArray: []
       };
-    case FETCH_SUCCESS:
+    case actionTypes.FETCH_SUCCESS:
       return {
-        ...state, articleArray: action.payload, success: true, error: false, loading: false,
+        ...state, articleArray: payload, success: true, error: false, loading: false,
       };
-    case FETCH_FAILED:
+    case actionTypes.FETCH_FAILED:
       return {
-        ...state, success: false, error: true, loading: false,
+        ...state, success: false, error: true, loading: false,articleArray: []
       };
     default:
       return state;

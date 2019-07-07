@@ -1,1 +1,3 @@
-export * from './actionTypes';
+import * as actionTypes from './actionTypes';
+
+export {actionTypes};

@@ -4,7 +4,7 @@ import ReduxThunk from 'redux-thunk';
 import {homePageReducer} from '../app/HomePage/store';
 import {detailsPageReducer} from '../app/DetailsPage/store';
 
-const rootReducer= combineReducers({
+export const rootReducer= combineReducers({
     articles:homePageReducer,
     selection:detailsPageReducer
 })

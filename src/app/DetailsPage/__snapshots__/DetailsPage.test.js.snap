@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display Page Snapshot test: Display page 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <ImageSection
+    testID="ImageSection"
+    url="test"
+  />
+  <DetailsCard
+    params={
+      Object {
+        "author": "test",
+        "content": "test",
+        "date": "2019-07-02",
+        "source": "The New York Times",
+        "title": "Test",
+        "url": "https://www.nytimes.com/2019/07/02/nyregion/judge-james-troiano-rape.html",
+      }
+    }
+    testID="DetailsCard"
+  />
+</View>
+`;

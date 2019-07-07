@@ -1,3 +1,4 @@
+/* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import {initStore} from './store';
@@ -15,5 +16,7 @@ class App extends Component {
     );
   }
 }
+
+
 
 export default App;

@@ -1,23 +1,20 @@
 import {
-  FETCH_STARTED,
-  FETCH_FAILED,
-  FETCH_SUCCESS,
-  SELECTED_ARTICLE,
+  actionTypes
 } from '../../../config';
 import { httpsUtil } from '../../../utils';
 import { URLS } from '../../../constants';
 
-const fetchStarted = () => ({
-  type: FETCH_STARTED,
+export const fetchStarted = () => ({
+  type: actionTypes.FETCH_STARTED,
 });
 
-const fetchSuccess = data => ({
-  type: FETCH_SUCCESS,
+export const fetchSuccess = data => ({
+  type: actionTypes.FETCH_SUCCESS,
   payload: data.results,
 });
 
-const fetchFailed = () => ({
-  type: FETCH_FAILED,
+export const fetchFailed = () => ({
+  type: actionTypes.FETCH_FAILED,
 });
 
 export const fetchNews = () => (dispatch) => {
@@ -27,6 +24,6 @@ export const fetchNews = () => (dispatch) => {
 
 
 export const selectedArticle = selectedItem => ({
-  type: SELECTED_ARTICLE,
+  type: actionTypes.SELECTED_ARTICLE,
   payload: selectedItem,
 });

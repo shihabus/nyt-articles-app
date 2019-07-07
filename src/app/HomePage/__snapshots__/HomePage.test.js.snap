@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Page Snapshot: Home page 1`] = `
+<SafeAreaView
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+    testID="List"
+  >
+    <List
+      handleSelection={[Function]}
+    />
+  </View>
+</SafeAreaView>
+`;

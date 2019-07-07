@@ -1,10 +1,10 @@
-import { SELECTED_ARTICLE } from '../../../config';
+import { actionTypes } from '../../../config';
 
-const initialState = {};
+const initialState = [];
 
 export const detailsPageReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SELECTED_ARTICLE:
+    case actionTypes.SELECTED_ARTICLE:
       return { ...state, selectedArticle: action.payload };
 
     default:

@@ -1,3 +1,5 @@
+/* eslint-disable react/sort-comp */
+/* eslint-disable no-useless-constructor */
 import React, { Component } from "react";
 import Icon from "react-native-vector-icons/FontAwesome";
 import { View, StyleSheet, SafeAreaView } from "react-native";
@@ -15,6 +17,10 @@ const styles = StyleSheet.create({
 });
 
 class HomePage extends Component {
+
+  constructor(props) {
+    super(props)
+}
 
   static navigationOptions = {
     title: STRINGS.homePageTitle,
@@ -52,13 +58,13 @@ class HomePage extends Component {
   renderSuspense = () => {
     const { error, loading, articleArray } = this.props;
     if (error) {
-      return <Error />;
+      return <Error testID='Error'/>;
     }
     if (loading) {
-      return <Loader />;
+      return <Loader testID='Loader'/>;
     }
     return (
-      <View style={{ flex: 1 }}>
+      <View style={{ flex: 1 }} testID='List'>
         <List
           article={articleArray}
           handleSelection={this.selectionHandler}
@@ -77,9 +83,9 @@ class HomePage extends Component {
 }
 
 HomePage.propTypes = {
-  fetchNews: PropTypes.func,
   // eslint-disable-next-line react/forbid-prop-types
   navigation: PropTypes.object,
+  fetchNews: PropTypes.func,
   articleArray: PropTypes.arrayOf(PropTypes.object),
   error: PropTypes.bool,
   loading: PropTypes.bool,

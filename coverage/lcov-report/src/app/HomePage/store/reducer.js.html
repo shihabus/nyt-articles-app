@@ -22,7 +22,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/27</span>
+        <span class='fraction'>0/29</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
@@ -68,21 +68,9 @@
 <a name='L20'></a><a href='#L20'>20</a>
 <a name='L21'></a><a href='#L21'>21</a>
 <a name='L22'></a><a href='#L22'>22</a>
-<a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a>
-<a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a>
-<a name='L28'></a><a href='#L28'>28</a>
-<a name='L29'></a><a href='#L29'>29</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L23'></a><a href='#L23'>23</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -102,29 +90,23 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { FETCH_FAILED, FETCH_STARTED, FETC<span class="cstat-no" title="statement not covered" >H_SUCCESS } from '../../../config';<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { actionTypes } from '../../../conf<span class="cstat-no" title="statement not covered" >ig';<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
 &nbsp;
-const homePageInitialState <span class="cstat-no" title="statement not covered" >= {</span>
-  articleArray: [],
-  loading: false,
-  error: false,
-  success: false,
-  selectedArticle: {},
-};
+const homePageInitialState <span class="cstat-no" title="statement not covered" >= [</span>];
 &nbsp;
-export const homePageR<span class="cstat-no" title="statement not covered" >educer = <span class="fstat-no" title="function not covered" >(state = homePag</span>eInitialState, <span class="cstat-no" title="statement not covered" >action) =&gt; {<span class="cstat-no" title="statement not covered" ></span></span></span>
-<span class="cstat-no" title="statement not covered" >  switch (action.type) {</span>
-    case FETCH_STARTED:
+export const homePageR<span class="cstat-no" title="statement not covered" >educer = <span class="fstat-no" title="function not covered" >(state = homePag</span>eInitialState, <span class="cstat-no" title="statement not covered" >{type,payload}) =&gt; {<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span></span></span>
+<span class="cstat-no" title="statement not covered" >  switch (type) {</span>
+    case actionTypes.FETCH_STARTED:
 <span class="cstat-no" title="statement not covered" >      return {</span>
-        ...state, success: false, error: false, loading: true,
+        ...state, success: false, error: false, loading: true,articleArray: []
       };
-    case FETCH_SUCCESS:
+    case actionTypes.FETCH_SUCCESS:
 <span class="cstat-no" title="statement not covered" >      return {</span>
-        ...state, articleArray: action.payload, success: true, error: false, loading: false,
+        ...state, articleArray: payload, success: true, error: false, loading: false,
       };
-    case FETCH_FAILED:
+    case actionTypes.FETCH_FAILED:
 <span class="cstat-no" title="statement not covered" >      return {</span>
-        ...state, success: false, error: true, loading: false,
+        ...state, success: false, error: true, loading: false,articleArray: []
       };
     default:
 <span class="cstat-no" title="statement not covered" >      return state;</span>
@@ -136,7 +118,7 @@ export const homePageR<span class="cstat-no" title="statement not covered" >educ
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Jul 07 2019 14:31:56 GMT+0530 (India Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Jul 08 2019 01:22:49 GMT+0530 (India Standard Time)
 </div>
 </div>
 <script src="../../../../prettify.js"></script>
