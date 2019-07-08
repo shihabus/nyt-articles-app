@@ -40,6 +40,7 @@ const Card = ({ item,handleSelection }) => {
     <TouchableOpacity
       style={styles.container}
       onPress={()=>handler(params)}
+      testID='Card'
     >
       <ImageContainer urlToImage={urlToImage} testID='ImageContainer'/>
       <TextContainer params={params} testID='TextContainer'/>

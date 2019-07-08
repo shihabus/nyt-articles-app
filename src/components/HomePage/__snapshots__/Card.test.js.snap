@@ -13,6 +13,7 @@ exports[`Home Page Card Snapshot test: Card 1`] = `
       "paddingVertical": 20,
     }
   }
+  testID="Card"
 >
   <ImageContainer
     testID="ImageContainer"

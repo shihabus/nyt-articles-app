@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="/Users/shihabudheenus/Documents/shihabudheen-us-news-app/src/components/HomePage/ImageContainer/index.test.js">
-    <testCase name="Image Snapshot" duration="30"/>
-    <testCase name="Image Checked props" duration="1"/>
-    <testCase name="Image should render child" duration="4"/>
-  </file>
-  <file path="/Users/shihabudheenus/Documents/shihabudheen-us-news-app/src/components/HomePage/IconContainer/index.test.js">
-    <testCase name="Icon Snapshot" duration="21"/>
-    <testCase name="Icon should render child" duration="6"/>
-  </file>
   <file path="/Users/shihabudheenus/Documents/shihabudheen-us-news-app/src/app/HomePage/HomePage.test.js">
-    <testCase name="Home Page Snapshot" duration="17"/>
-    <testCase name="Home Page Checked props" duration="1"/>
-    <testCase name="Home Page should render List component on success" duration="3"/>
+    <testCase name="Home Page Snapshot" duration="33"/>
+    <testCase name="Home Page Checked props" duration="4"/>
+    <testCase name="Home Page should render List component on success" duration="8"/>
   </file>
   <file path="/Users/shihabudheenus/Documents/shihabudheen-us-news-app/src/components/HomePage/Card.test.js">
-    <testCase name="Home Page Card Snapshot test" duration="68"/>
-    <testCase name="Home Page Card Checked props" duration="1"/>
-    <testCase name="Home Page Card should render child" duration="9"/>
+    <testCase name="Home Page Card Snapshot test" duration="141"/>
+    <testCase name="Home Page Card Checked props" duration="3"/>
+    <testCase name="Home Page Card should render child" duration="10"/>
   </file>
 </testExecutions>
