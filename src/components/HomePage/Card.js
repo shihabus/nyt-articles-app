@@ -16,92 +16,37 @@ const styles = StyleSheet.create({
   }
 });
 
-// const Card = ({ item,handleSelection }) => {
+export const ImageExtractor=(media,type)=>(
+  media[0]["media-metadata"]
+  .filter(x => x.format === type)[0]
+  .url.toString()
+)
 
-//   const { byline, source, published_date, title, media, id,abstract,url } = item;
+const Card = ({ item,handleSelection }) => {
 
-//   const urlToImage = media[0]["media-metadata"]
-//   .filter(x => x.format === "Large Thumbnail")[0]
-//   .url.toString();
+  const { byline, source, published_date, title, media,abstract,url } = item;
 
-//   const urlToLargeImage = media[0]["media-metadata"]
-//   .filter(x => x.format === "mediumThreeByTwo440")[0]
-//   .url.toString();
+  const urlToImage = ImageExtractor(media,"Large Thumbnail")
 
-//   const params = { byline, source, published_date, title,abstract,url,imageURL:urlToLargeImage};
+  const urlToLargeImage = ImageExtractor(media,"mediumThreeByTwo440")
 
-//   const handler=(selection)=>{
-//     handleSelection(selection)
-//   }
+  const params = { byline, source, published_date, title,abstract,url,imageURL:urlToLargeImage};
 
-//   return (
-//     <TouchableOpacity
-//       style={styles.container}
-//       onPress={()=>handler(params)}
-//     >
-//       <ImageContainer urlToImage={urlToImage} />
-//       <TextContainer params={params} />
-//       <IconContainer />
-//     </TouchableOpacity>
-//   );
-// };
-
-class Card extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      urlToImage: "",
-      params: ""
-    };
+  const handler=(selection)=>{
+    handleSelection(selection)
   }
 
-  componentDidMount() {
-    this.setUpProps();
-  }
-
-  setUpProps() {
-    const {
-      item: { byline, source, published_date, title, media, abstract, url }
-    } = this.props;
-    const urlToImage = this.imageExtractor(media, "Large Thumbnail");
-    const urlToLargeImage = this.imageExtractor(media, "mediumThreeByTwo440");
-    const params = {
-      byline,
-      source,
-      published_date,
-      title,
-      abstract,
-      url,
-      imageURL: urlToLargeImage
-    };
-    this.setState({
-      urlToImage,
-      params
-    });
-  }
-
-  imageExtractor = (media, type) =>
-    media[0]["media-metadata"].filter(x => x.format === type)[0].url.toString();
-
-  handler = selection => {
-    const {handleSelection}=this.props
-    handleSelection(selection);
-  };
-
-  render() {
-    const { params, urlToImage } = this.state;
-    return (
-      <TouchableOpacity
-        style={styles.container}
-        onPress={() => this.handler(params)}
-      >
-        <ImageContainer urlToImage={urlToImage} />
-        <TextContainer params={params} />
-        <IconContainer />
-      </TouchableOpacity>
-    );
-  }
-}
+  return (
+    <TouchableOpacity
+      style={styles.container}
+      onPress={()=>handler(params)}
+    >
+      <ImageContainer urlToImage={urlToImage} testID='ImageContainer'/>
+      <TextContainer params={params} testID='TextContainer'/>
+      <IconContainer testID='IconContainer'/>
+    </TouchableOpacity>
+  );
+};
 
 Card.propTypes = {
   item: PropTypes.shape({

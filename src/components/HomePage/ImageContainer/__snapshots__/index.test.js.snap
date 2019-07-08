@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image Snapshot: Image 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "width": "20%",
+    }
+  }
+>
+  <Image
+    resizeMode="contain"
+    source={
+      Object {
+        "uri": "Test",
+      }
+    }
+    style={
+      Object {
+        "alignSelf": "center",
+        "backgroundColor": "#CED0CE",
+        "borderRadius": 25,
+        "height": 50,
+        "width": 50,
+      }
+    }
+    testID="Image"
+  />
+</View>
+`;

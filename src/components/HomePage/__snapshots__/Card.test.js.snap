@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Page Card Snapshot test: Card 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[Function]}
+  style={
+    Object {
+      "alignContent": "center",
+      "backgroundColor": "#fff",
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+      "paddingVertical": 20,
+    }
+  }
+>
+  <ImageContainer
+    testID="ImageContainer"
+    urlToImage="https://static01.nyt.com/images/2019/06/27/multimedia/27xp-alabama1/27xp-alabama1-thumbLarge.jpg"
+  />
+  <TextContainer
+    params={
+      Object {
+        "abstract": "Test",
+        "byline": "Test",
+        "imageURL": "https://static01.nyt.com/images/2019/06/27/multimedia/27xp-alabama1/27xp-alabama1-mediumThreeByTwo440.jpg",
+        "published_date": "Test",
+        "source": "Test",
+        "title": "Test",
+        "url": "Test",
+      }
+    }
+    testID="TextContainer"
+  />
+  <IconContainer
+    testID="IconContainer"
+  />
+</TouchableOpacity>
+`;

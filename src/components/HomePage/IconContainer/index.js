@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
 const IconContainer = () => {
   return (
     <View style={styles.container}>
-      <Icon name="chevron-right" size={15} color="gray" style={styles.icon} />
+      <Icon name="chevron-right" size={15} color="gray" style={styles.icon} testID='Icon'/>
     </View>
   );
 };

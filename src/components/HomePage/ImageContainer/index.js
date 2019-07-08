@@ -19,6 +19,7 @@ const styles=StyleSheet.create({
 const ImageContainer = ({ urlToImage }) => (
     <View style={styles.imageContainer}>
       <Image
+        testID='Image'
         style={styles.imageStyle}
         resizeMode="contain"
         source={{ uri: urlToImage }}

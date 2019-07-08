@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon Snapshot: Icon 1`] = `
+<View
+  style={
+    Object {
+      "alignContent": "center",
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "width": "10%",
+    }
+  }
+>
+  <Icon
+    allowFontScaling={false}
+    color="gray"
+    name="chevron-right"
+    size={15}
+    style={
+      Object {
+        "alignSelf": "center",
+      }
+    }
+    testID="Icon"
+  />
+</View>
+`;

@@ -1,48 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="/Users/shihabudheenus/Documents/shihabudheen-us-news-app/src/components/HomePage/TextContainer/Title/index.test.js">
-    <testCase name="Title Snapshot" duration="23"/>
-    <testCase name="Title Checked props" duration="1"/>
-    <testCase name="Title should render child" duration="3"/>
+  <file path="/Users/shihabudheenus/Documents/shihabudheen-us-news-app/src/components/HomePage/ImageContainer/index.test.js">
+    <testCase name="Image Snapshot" duration="30"/>
+    <testCase name="Image Checked props" duration="1"/>
+    <testCase name="Image should render child" duration="4"/>
+  </file>
+  <file path="/Users/shihabudheenus/Documents/shihabudheen-us-news-app/src/components/HomePage/IconContainer/index.test.js">
+    <testCase name="Icon Snapshot" duration="21"/>
+    <testCase name="Icon should render child" duration="6"/>
   </file>
   <file path="/Users/shihabudheenus/Documents/shihabudheen-us-news-app/src/app/HomePage/HomePage.test.js">
-    <testCase name="Home Page Snapshot" duration="9"/>
+    <testCase name="Home Page Snapshot" duration="17"/>
     <testCase name="Home Page Checked props" duration="1"/>
-    <testCase name="Home Page should render List component on success" duration="2"/>
-  </file>
-  <file path="/Users/shihabudheenus/Documents/shihabudheen-us-news-app/src/components/HomePage/TextContainer/Footer/index.test.js">
-    <testCase name="Footer Snapshot" duration="7"/>
-    <testCase name="Footer Checked props" duration="1"/>
-    <testCase name="Footer should render child" duration="3"/>
-  </file>
-  <file path="/Users/shihabudheenus/Documents/shihabudheen-us-news-app/src/components/HomePage/TextContainer/Author/index.test.js">
-    <testCase name="Author Snapshot" duration="5"/>
-    <testCase name="Author Checked props" duration="1"/>
-    <testCase name="Author should render child" duration="1"/>
+    <testCase name="Home Page should render List component on success" duration="3"/>
   </file>
   <file path="/Users/shihabudheenus/Documents/shihabudheen-us-news-app/src/components/HomePage/Card.test.js">
-    <testCase name="Dummy" duration="0"/>
-  </file>
-  <file path="/Users/shihabudheenus/Documents/shihabudheen-us-news-app/src/app/DetailsPage/DetailsPage.test.js">
-    <testCase name="Display Page Snapshot test" duration="4"/>
-    <testCase name="Display Page should render child components" duration="2"/>
-    <testCase name="Display Page Checked props" duration="0"/>
-  </file>
-  <file path="/Users/shihabudheenus/Documents/shihabudheen-us-news-app/src/app/DetailsPage/store/reducer.test.js">
-    <testCase name="Details Page Reducer should return the initial state" duration="1"/>
-    <testCase name="Details Page Reducer should handle default" duration="0"/>
-    <testCase name="Details Page Reducer should handle SELECTED_ARTICLE" duration="1"/>
-  </file>
-  <file path="/Users/shihabudheenus/Documents/shihabudheen-us-news-app/src/app/HomePage/store/reducer.test.js">
-    <testCase name="Home Page Reducer should return the initial state" duration="0"/>
-    <testCase name="Home Page Reducer should handle default" duration="1"/>
-    <testCase name="Home Page Reducer should handle FETCH_STARTED" duration="0"/>
-    <testCase name="Home Page Reducer should handle FETCH_FAILED" duration="0"/>
-  </file>
-  <file path="/Users/shihabudheenus/Documents/shihabudheen-us-news-app/src/app/HomePage/store/action.test.js">
-    <testCase name="Home Page Actions should trigger start fetch" duration="0"/>
-    <testCase name="Home Page Actions should trigger fetch success" duration="1"/>
-    <testCase name="Home Page Actions should trigger fetch failure" duration="0"/>
-    <testCase name="Home Page Actions should trigger article selection" duration="1"/>
+    <testCase name="Home Page Card Snapshot test" duration="68"/>
+    <testCase name="Home Page Card Checked props" duration="1"/>
+    <testCase name="Home Page Card should render child" duration="9"/>
   </file>
 </testExecutions>

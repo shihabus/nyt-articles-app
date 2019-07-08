@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">68.18% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>22/22</span>
+        <span class='fraction'>15/22</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,21 +30,21 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>6/6</span>
+        <span class='fraction'>0/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">86.67% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>15/15</span>
+        <span class='fraction'>13/15</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line high'></div>
+  <div class='status-line medium'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -75,34 +75,34 @@
 <a name='L27'></a><a href='#L27'>27</a>
 <a name='L28'></a><a href='#L28'>28</a>
 <a name='L29'></a><a href='#L29'>29</a>
-<a name='L30'></a><a href='#L30'>30</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">7x</span>
+<a name='L30'></a><a href='#L30'>30</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {
   actionTypes
@@ -110,26 +110,26 @@
 import { httpsUtil } from '../../../utils';
 import { URLS } from '../../../constants';
 &nbsp;
-export const fetchStarted = () =&gt; ({
+export const fetchStarted = <span class="fstat-no" title="function not covered" >() =&gt; ({<span class="cstat-no" title="statement not covered" ></span></span>
   type: actionTypes.FETCH_STARTED,
 });
 &nbsp;
-export const fetchSuccess = data =&gt; ({
+export const fetchSuccess = <span class="fstat-no" title="function not covered" >data =&gt; ({<span class="cstat-no" title="statement not covered" ></span></span>
   type: actionTypes.FETCH_SUCCESS,
   payload: data.results,
 });
 &nbsp;
-export const fetchFailed = () =&gt; ({
+export const fetchFailed = <span class="fstat-no" title="function not covered" >() =&gt; ({<span class="cstat-no" title="statement not covered" ></span></span>
   type: actionTypes.FETCH_FAILED,
 });
 &nbsp;
-export const fetchNews = () =&gt; (dispatch) =&gt; {
-  dispatch(fetchStarted());
-  httpsUtil.makeGetCall(URLS.topArticles, dispatch, fetchSuccess, fetchFailed);
+export const fetchNews = <span class="fstat-no" title="function not covered" >() =&gt; (dis</span>pat<span class="cstat-no" title="statement not covered" >ch) =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+  di<span class="cstat-no" title="statement not covered" >spatch(fetchStarted());</span>
+  ht<span class="cstat-no" title="statement not covered" >tpsUtil.makeGetCall(URLS.topArticles, dispatch, fetchSuccess, fetchFailed);</span>
 };
 &nbsp;
 &nbsp;
-export const selectedArticle = selectedItem =&gt; ({
+export const selectedArticle = <span class="fstat-no" title="function not covered" >selectedItem =&gt; </span>({<span class="cstat-no" title="statement not covered" ></span>
   type: actionTypes.SELECTED_ARTICLE,
   payload: selectedItem,
 });
@@ -139,7 +139,7 @@ export const selectedArticle = selectedItem =&gt; ({
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Jul 08 2019 09:00:17 GMT+0530 (India Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Jul 08 2019 09:34:28 GMT+0530 (India Standard Time)
 </div>
 </div>
 <script src="../../../prettify.js"></script>
