@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Author Snapshot: Author 1`] = `
+<View>
+  <Text
+    style={
+      Object {
+        "color": "gray",
+        "fontSize": 14,
+      }
+    }
+    testID="Author Text"
+  >
+    Test
+  </Text>
+</View>
+`;

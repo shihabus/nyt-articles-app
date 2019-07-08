@@ -23,8 +23,8 @@ const styles = StyleSheet.create({
 const Footer = ({ source, published_date }) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.greyText}>{source}</Text>
-      <Text style={styles.dateText}>
+      <Text style={styles.greyText} testID='Source Text'>{source}</Text>
+      <Text style={styles.dateText} testID='Date container'>
         <Icon
           name="calendar"
           size={10}
@@ -38,8 +38,8 @@ const Footer = ({ source, published_date }) => {
 };
 
 Footer.propTypes = {
-  source: PropTypes.string.isRequired,
-  published_date: PropTypes.string.isRequired
+  source: PropTypes.string,
+  published_date: PropTypes.string
 };
 
 export default Footer;

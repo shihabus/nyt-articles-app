@@ -7,7 +7,7 @@ module.exports = {
     },
     setupFiles: ["<rootDir>/jest/setup.js"],
     transformIgnorePatterns: ["node_modules/(?!(jest-)?react-native)"],
-    coveragePathIgnorePatterns: ["/node_modules/", "/jest",'/src/config/routes.js','/src/utils'],
+    coveragePathIgnorePatterns: ["/node_modules/", "/jest",'/src/config/routes.js','/src/utils','/src/App.js'],
     testResultsProcessor: "jest-sonar-reporter",
     collectCoverageFrom: [
       "**/src/**/*.{js,jsx}",

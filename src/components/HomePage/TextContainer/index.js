@@ -17,6 +17,7 @@ const styles=StyleSheet.create({
   },
 })
 const TextContainer = ({ params }) => {
+  console.log('Params',params);
   const { title, byline, published_date, source } = params;
   return (
     <View style={styles.container}>

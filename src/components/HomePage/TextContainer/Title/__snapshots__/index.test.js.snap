@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title Snapshot: Title 1`] = `
+<Text
+  ellipsizeMode="tail"
+  numberOfLines={2}
+  style={
+    Object {
+      "fontSize": 16,
+      "textAlign": "justify",
+    }
+  }
+  testID="Title"
+>
+  Test
+</Text>
+`;

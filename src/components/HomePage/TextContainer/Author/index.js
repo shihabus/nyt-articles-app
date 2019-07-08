@@ -12,13 +12,13 @@ const styles=StyleSheet.create({
 const Author = ({byline}) => {
     return (
         <View>
-          <Text style={styles.greyText}>{byline}</Text>
+          <Text style={styles.greyText} testID='Author Text'>{byline}</Text>
         </View>
     )
 }
 
 Author.propTypes={
-    byline:PropTypes.string.isRequired
+    byline:PropTypes.string
 }
 
 

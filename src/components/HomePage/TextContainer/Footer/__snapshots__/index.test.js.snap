@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Snapshot: Footer 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "gray",
+        "fontSize": 14,
+      }
+    }
+    testID="Source Text"
+  >
+    Test
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "gray",
+        "fontSize": 12,
+      }
+    }
+    testID="Date container"
+  >
+    <Icon
+      allowFontScaling={false}
+      color="gray"
+      name="calendar"
+      size={10}
+      style={
+        Object {
+          "alignSelf": "center",
+        }
+      }
+    />
+     
+    Test
+  </Text>
+</View>
+`;

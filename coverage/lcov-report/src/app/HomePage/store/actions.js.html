@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/22</span>
+        <span class='fraction'>22/22</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,21 +30,21 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/6</span>
+        <span class='fraction'>6/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/15</span>
+        <span class='fraction'>15/15</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -75,63 +75,63 @@
 <a name='L27'></a><a href='#L27'>27</a>
 <a name='L28'></a><a href='#L28'>28</a>
 <a name='L29'></a><a href='#L29'>29</a>
-<a name='L30'></a><a href='#L30'>30</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L30'></a><a href='#L30'>30</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {
   actionTypes
 } from '../../../config';
-import { http<span class="cstat-no" title="statement not covered" >sUtil } from '../../../uti</span>ls';
-import { URLS } f<span class="cstat-no" title="statement not covered" >rom '../../../constants';</span>
+import { httpsUtil } from '../../../utils';
+import { URLS } from '../../../constants';
 &nbsp;
-export const fetchS<span class="cstat-no" title="statement not covered" >tarted = <span class="fstat-no" title="function not covered" >() =&gt; ({<span class="cstat-no" title="statement not covered" ></span></span></span>
-  type: actionTypes.FETCH_STARTED,<span class="cstat-no" title="statement not covered" ></span>
+export const fetchStarted = () =&gt; ({
+  type: actionTypes.FETCH_STARTED,
 });
 &nbsp;
-export const fetchS<span class="cstat-no" title="statement not covered" >uccess = <span class="fstat-no" title="function not covered" >data =&gt; ({<span class="cstat-no" title="statement not covered" ></span></span></span>
+export const fetchSuccess = data =&gt; ({
   type: actionTypes.FETCH_SUCCESS,
-  payload: data.results,<span class="cstat-no" title="statement not covered" ></span>
+  payload: data.results,
 });
 &nbsp;
-export const fetch<span class="cstat-no" title="statement not covered" >Failed = <span class="fstat-no" title="function not covered" >() =&gt; ({<span class="cstat-no" title="statement not covered" ></span></span></span>
-  type: actionTypes.FETCH_FAILED,<span class="cstat-no" title="statement not covered" ></span>
+export const fetchFailed = () =&gt; ({
+  type: actionTypes.FETCH_FAILED,
 });
 &nbsp;
-export const fet<span class="cstat-no" title="statement not covered" >chNews = <span class="fstat-no" title="function not covered" >() =&gt; (dis</span>pat<span class="cstat-no" title="statement not covered" >ch) =&gt; <span class="fstat-no" title="function not covered" >{</span></span></span>
-  di<span class="cstat-no" title="statement not covered" >spatch(fetchStarted());</span>
-  ht<span class="cstat-no" title="statement not covered" >tpsUtil.makeGetCall(URLS.topArticles, dispatch, fetchSuccess, fetchFailed);</span>
-};<span class="cstat-no" title="statement not covered" ></span>
+export const fetchNews = () =&gt; (dispatch) =&gt; {
+  dispatch(fetchStarted());
+  httpsUtil.makeGetCall(URLS.topArticles, dispatch, fetchSuccess, fetchFailed);
+};
 &nbsp;
 &nbsp;
-export const selectedA<span class="cstat-no" title="statement not covered" >rticle = <span class="fstat-no" title="function not covered" >selectedItem =&gt; </span>({<span class="cstat-no" title="statement not covered" ></span></span>
+export const selectedArticle = selectedItem =&gt; ({
   type: actionTypes.SELECTED_ARTICLE,
-  payload: selectedItem,<span class="cstat-no" title="statement not covered" ></span>
+  payload: selectedItem,
 });
 &nbsp;</pre></td></tr>
 </table></pre>
@@ -139,7 +139,7 @@ export const selectedA<span class="cstat-no" title="statement not covered" >rtic
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Jul 08 2019 01:22:49 GMT+0530 (India Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Jul 08 2019 08:12:04 GMT+0530 (India Standard Time)
 </div>
 </div>
 <script src="../../../../prettify.js"></script>

@@ -11,14 +11,14 @@ const styles = StyleSheet.create({
 
 const Title = ({ title }) => {
   return (
-    <Text numberOfLines={2} ellipsizeMode="tail" style={styles.titleText}>
+    <Text numberOfLines={2} ellipsizeMode="tail" style={styles.titleText} testID='Title'>
       {title}
     </Text>
   );
 };
 
 Title.propTypes = {
-  title: PropTypes.string.isRequired
+  title: PropTypes.string
 };
 
 export default Title;
